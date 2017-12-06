@@ -11,24 +11,7 @@ A bot that downloads photos from a facebook page
 
 usage: facebookbot.py [-h] -u USERNAME -p PASSWORD [-n HASNAME] [-i ID]
                       [-r RANDOMPAGE] [-s ITERATIONS]
-
-Downloads images from facebook account
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -u USERNAME, --username USERNAME
-                        facebook username
-  -p PASSWORD, --password PASSWORD
-                        facebook password
-  -n HASNAME, --hasName HASNAME
-                        Tells us if the account has a name instead of a number
-                        - 1 for yes and 0 for no
-  -i ID, --id ID        facebook id
-  -r RANDOMPAGE, --random RANDOMPAGE
-                        randomly goes to someones page and downloads there
-                        photos - male / female
-  -s ITERATIONS, --iterations ITERATIONS
-                        the amount of pages to go through
+                      
 
 **** -u the username of your facebook account (required)
 **** -p the password of your facebook account (required)
