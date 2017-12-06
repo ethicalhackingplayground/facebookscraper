@@ -87,7 +87,7 @@ def goToUserPage (url):
 			print "[+] Trying next person"
 			randomPage()
 		else:
-			print "[!] Page might be private"
+			print "[!] Try changing the min and max speeds"
 
 def GoToPage (link):
 	
