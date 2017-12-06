@@ -83,7 +83,7 @@ def goToUserPage (url):
 		GoToPage("Featured Photos")
 	except:
 		# Start the random download again.
-		if args.randompage != None:
+		if args.randomsearch != None:
 			print "[+] Trying next person"
 			randomPage()
 		else:
