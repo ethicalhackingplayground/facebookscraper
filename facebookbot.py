@@ -45,6 +45,11 @@ def login (username, password):
 	userID.send_keys(username)
 	passID.send_keys(password)
 
+	time.sleep(3)
+	if 'https://www.facebook.com/login.php?login_attempt' in browser.current_url:
+		print "[!] Wrong password"
+		return
+
 	# Login to account
 	login = browser.find_element_by_id("loginbutton")
 	login.send_keys(Keys.ENTER)
@@ -62,7 +67,7 @@ def login (username, password):
 
 def randomPage ():
 	for i in range(0, args.iterations):
-		name=names.get_first_name(gender=args.random)
+		name=names.get_first_name(gender=args.randompage)
 		args.id = name
 		goToUserPage("https://www.facebook.com/" + args.id)
 
@@ -74,11 +79,17 @@ def goToUserPage (url):
  	browser.get(url)
 	time.sleep(random.uniform(3, 6))
 
-	# Go to the pages to download the images.
-	GoToPage("Photos")
-	GoToPage("Albums")
-	GoToPage("Featured Photos")
-	
+	try:
+
+		# Go to the pages to download the images.
+		GoToPage("Photos")
+		GoToPage("Albums")
+		GoToPage("Featured Photos")
+	except:
+		# Start the random download again.
+		if args.randompage != None:
+			print "[+] Trying next person"
+			randomPage()
 
 def GoToPage (link):
 	
@@ -119,14 +130,14 @@ def getImages (currentUrl):
 
 		if (os.path.exists('images/' + args.id)) == False:
 			# Make the directory to store the images
-			os.system("mkdir images/" + args.id)
+			os.system("sudo mkdir images/" + args.id)
 
 		for image in images:
 			print "\n[+] Downloading " + image
 			os.system("wget -q " + "'" + image + "'" + " -P images/" + args.id)
 
 	# Start the random download again.
-	if args.random != None:
+	if args.randompage != None:
 		randomPage()
 	
 
