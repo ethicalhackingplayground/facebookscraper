@@ -112,15 +112,18 @@ def getImages (currentUrl):
 		images.append(getimg)	
 
 
-	for img in soup.find_all("img", class_="_pq3 img"):
-		getimg = str(img.get('style')).strip("background-image: url();")
+	#
+	# TODO: This needs some work.
+	# 
+	#for img in soup.find_all("img", class_="_pq3 img"):
+		#getimg = str(img.get('style')).strip("background-image: url();")
 		#format_1 = string.replace(getimg, '\3a ', ":")
 		#format_2 = string.replace(format_1, '\x03d ', "=")
 		#format_3 = string.replace(format_2, '\x16 ', "&")
 		#format_4 = string.replace(format_3, '\26 ', "&")
 
 		# Append it to the list.
-		images.append(getimg)
+		#images.append(getimg)
 
 
 	# Check if there are any photos in the array.
