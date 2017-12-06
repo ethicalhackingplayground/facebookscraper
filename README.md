@@ -4,7 +4,7 @@ A bot that downloads photos from a facebook page
 
 ### Getting it ready
 
-> sh setup.sh
+> sudo sh setup.sh
 
 ### How to get help
 > python facebookbot.py -h
