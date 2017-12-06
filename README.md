@@ -13,16 +13,22 @@ usage: facebookbot.py [-h] -u USERNAME -p PASSWORD [-n HASNAME] [-i ID]
                       [-r RANDOMPAGE] [-s ITERATIONS]
                       
 
--u the username of your facebook account (required)
--p the password of your facebook account (required)
--n if the account has a name instead use this argument 
+-u 
+the username of your facebook account (required)
+-p 
+the password of your facebook account (required)
+-n 
+if the account has a name instead use this argument 
 looks like "http://www.facebook.com/name_here"
 
--i if the account has a facebook id use this argument   
+-i 
+if the account has a facebook id use this argument   
 looks like "https://www.facebook.com/profile.php?id=id_here"
 
--r argument randomly searches through pages on facebook and downloads there images
--s is the amount of pages to search for
+-r 
+argument randomly searches through pages on facebook and downloads there images
+-s 
+is the amount of pages to search for
 
 
 ### Examples
