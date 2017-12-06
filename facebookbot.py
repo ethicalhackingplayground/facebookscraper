@@ -64,8 +64,7 @@ def randomPage ():
 	for i in range(0, args.iterations):
 		name=names.get_first_name(gender=args.random)
 		args.id = name
-		goToUserPage("https://www.facebook.com/" + args.id
-)
+		goToUserPage("https://www.facebook.com/" + args.id)
 
 def goToUserPage (url):
 	
