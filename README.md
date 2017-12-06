@@ -49,3 +49,6 @@ looks like "https://www.facebook.com/profile.php?id=id_here"
 - python facebookbot.py -u username -p password -r female -s 20
 
 
+Happy hacking. ;)
+
+
