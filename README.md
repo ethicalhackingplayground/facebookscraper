@@ -11,7 +11,9 @@ A bot that downloads photos from a facebook page
 
 usage: facebookbot.py [-h] -u USERNAME -p PASSWORD [-n HASNAME] [-i ID]
                       [-r RANDOMPAGE] [-s ITERATIONS]
-                      
+                   
+                   
+### Arguments
 
 -u 
 the username of your facebook account (required)
