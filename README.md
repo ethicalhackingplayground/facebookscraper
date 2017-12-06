@@ -17,7 +17,7 @@ usage: facebookbot.py [-h] -u USERNAME -p PASSWORD [-n HASNAME] [-i ID]
 
 - -u the username of your facebook account (required)
 - -p the password of your facebook account (required)
-- -n if the account has a name instead use this argument 
+- -n if the account has a name use this argument 
 looks like "http://www.facebook.com/name_here"
 
 - -i if the account has a facebook id use this argument   
