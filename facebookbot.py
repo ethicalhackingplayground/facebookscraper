@@ -130,7 +130,7 @@ def getImages (currentUrl):
 
 		if (os.path.exists('images/' + args.id)) == False:
 			# Make the directory to store the images
-			os.system("sudo mkdir images/" + args.id)
+			os.system("mkdir images/" + args.id)
 
 		for image in images:
 			print "\n[+] Downloading " + image
@@ -151,7 +151,7 @@ def Main ():
 	parser.add_argument('-u', '--username', dest='username', help='facebook username', required=True, type=str)
 	parser.add_argument('-p', '--password', dest='password', help='facebook password', required=True, type=str)
 	parser.add_argument('-n', '--hasName' , dest='hasName' , help='Tells us if the account has a name instead of a number - 1 for yes and 0 for no', required=False, type=str)
-	parser.add_argument('-i', '--id', dest='id', help='facebook id', required=False, type=int)
+	parser.add_argument('-i', '--id', dest='id', help='facebook id', required=False, type=str)
 	parser.add_argument('-r', '--random', dest='randompage', help='randomly goes to someones page and downloads there photos - male / female', required=False, type=str)
 	parser.add_argument('-s', '--iterations', dest='iterations', help='the amount of pages to go through', required=False, type=int)
 
