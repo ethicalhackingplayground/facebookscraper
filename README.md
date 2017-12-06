@@ -2,6 +2,10 @@
 
 A bot that downloads photos from a facebook page
 
+### How to download 
+> git clone https://github.com/ethicalhackingplayground/facebookscraper.git
+
+
 ### Getting it ready
 
 > sudo sh setup.sh
