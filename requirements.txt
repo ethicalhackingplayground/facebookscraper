@@ -1,0 +1,4 @@
+selenium
+beautifulsoup
+bs4
+names
