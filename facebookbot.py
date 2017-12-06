@@ -48,7 +48,7 @@ def login (username, password):
 	# Login to account
 	login = browser.find_element_by_id("loginbutton")
 	login.send_keys(Keys.ENTER)
-	time.sleep(random.uniform(float(args.min), float(args.max)))
+	time.sleep(random.uniform(3, 6))
 	print "[+] Logged in"
 
 	# Go to the users page.
@@ -73,7 +73,7 @@ def goToUserPage (url):
 
 	# Go to the users page
  	browser.get(url)
-	time.sleep(random.uniform(float(args.min), float(args.max)))
+	time.sleep(random.uniform(3, 6))
 
 	try:
 
@@ -94,7 +94,7 @@ def GoToPage (link):
 	# Go to there images page.
 	print "[+] Navigating to the " + link
 	browser.find_element_by_link_text(link).click()
-	time.sleep(random.uniform(float(args.min), float(args.max)))
+	time.sleep(random.uniform(3, 6))
 	getImages(browser.current_url)
 	
 	
@@ -152,8 +152,6 @@ def Main ():
 	parser.add_argument('-d', '--id', dest='id', help='facebook id', required=False, type=str)
 	parser.add_argument('-r', '--randomsearch', dest='randomsearch', help='randomly goes to someones page and downloads there photos - male / female', required=False, type=str)
 	parser.add_argument('-i', '--iterations', dest='iterations', help='the amount of pages to go through', required=False, type=int)
-	parser.add_argument('-min', '--min',dest='min', help='the min speed of the search', required=False, type=float)
-	parser.add_argument('-max', '--max',dest='max', help='the max speed of the search', required=False, type=float)
 	global args
 	args = parser.parse_args()
 
