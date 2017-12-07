@@ -149,12 +149,14 @@ def Main ():
 	
 	# Create some arguments.
 	parser = argparse.ArgumentParser(description="Downloads images from facebook account")
-	parser.add_argument('-u', '--username', dest='username', help='facebook username', required=True, type=str)
-	parser.add_argument('-p', '--password', dest='password', help='facebook password', required=True, type=str)
-	parser.add_argument('-n', '--hasName' , dest='hasName' , help='Tells us if the account has a name instead of a number - 1 for yes and 0 for no', required=False, type=str)
-	parser.add_argument('-d', '--id', dest='id', help='facebook id', required=False, type=str)
-	parser.add_argument('-r', '--randomsearch', dest='randomsearch', help='randomly goes to someones page and downloads there photos - male / female', required=False, type=str)
-	parser.add_argument('-i', '--iterations', dest='iterations', help='the amount of pages to go through', required=False, type=int)
+	required = parser.add_argument_group("Required Arguments")
+	optional = parser.add_argument_group("Optional Arguments")
+	required.add_argument('-u', '--username', dest='username', help='facebook username', required=True, type=str)
+	required.add_argument('-p', '--password', dest='password', help='facebook password', required=True, type=str)
+	optional.add_argument('-n', '--hasName' , dest='hasName' , help='Tells us if the account has a name instead of a number', choices=['0','1'], required=False, type=str)
+	optional.add_argument('-d', '--id', dest='id', help='facebook id', required=False, type=str)
+	optional.add_argument('-r', '--randomsearch', dest='randomsearch', help='randomly goes to someones page and downloads there photos', choices=['male', 'female'], required=False, type=str)
+	optional.add_argument('-i', '--iterations', dest='iterations', help='the amount of pages to go through', required=False, type=int)
 	global args
 	args = parser.parse_args()
 
