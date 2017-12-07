@@ -62,15 +62,23 @@ def login (username, password):
 		
 
 def randomPage ():
-	if args.iterations > 100:
-		print "[!] Too many downloads try a value under 100"
-		return
-	for i in range(0, args.iterations):
-		if (i == args.iterations):
-			break
-		name=names.get_first_name(gender=args.randomsearch)
-		args.id = name
-		goToUserPage("https://www.facebook.com/" + args.id)
+	# The max downloads
+	if args.maxdownloads != None:
+		# Search for peoples pages and download there images.
+		for i in range(0, args.maxdownloads):
+			if (i == args.iterations):
+				break
+			name=names.get_first_name(gender=args.randomsearch)
+			args.id = name
+			goToUserPage("https://www.facebook.com/" + args.id)
+	else:
+		# Search for peoples pages and download there images.
+		for i in range(0, args.iterations):
+			if (i == args.iterations):
+				break
+			name=names.get_first_name(gender=args.randomsearch)
+			args.id = name
+			goToUserPage("https://www.facebook.com/" + args.id)
 	print "[+] Successfully download photos"
 
 def goToUserPage (url):
@@ -157,6 +165,7 @@ def Main ():
 	parser.add_argument('-d', '--id', dest='id', help='facebook id', required=False, type=str)
 	parser.add_argument('-r', '--randomsearch', dest='randomsearch', help='randomly goes to someones page and downloads there photos - male / female', required=False, type=str)
 	parser.add_argument('-i', '--iterations', dest='iterations', help='the amount of pages to go through', required=False, type=int)
+	parser.add_argument('-m', '--max-downloads', dest='maxdownloads', help='the maximum amount of pages to go through', required=False, type=int)
 	global args
 	args = parser.parse_args()
 
