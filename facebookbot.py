@@ -63,9 +63,12 @@ def login (username, password):
 
 def randomPage ():
 	for i in range(0, args.iterations):
+		if (i == args.iterations):
+			break
 		name=names.get_first_name(gender=args.randomsearch)
 		args.id = name
 		goToUserPage("https://www.facebook.com/" + args.id)
+	print "[+] Successfully download photos"
 
 def goToUserPage (url):
 	
