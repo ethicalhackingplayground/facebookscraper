@@ -37,3 +37,6 @@ sudo mkdir images
 
 # Install everything that is required.
 sudo pip install -r requirements.txt
+
+# Changing permissions
+sudo chown -R $USER: $HOME
