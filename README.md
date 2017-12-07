@@ -2,8 +2,11 @@
 
 A bot that downloads photos from a facebook page
 
+## Getting Preppedd
+> sudo apt-get update && apt-get upgrade && apt-get install git
+
 ### How to download 
-> git clone https://github.com/ethicalhackingplayground/facebookscraper.git
+> sudo git clone https://github.com/ethicalhackingplayground/facebookscraper.git
 
 
 ### Getting it ready
