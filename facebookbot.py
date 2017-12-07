@@ -63,7 +63,7 @@ def login (username, password):
 
 def randomPage ():
 	for i in range(0, args.iterations):
-		name=names.get_first_name(gender=args.randompage)
+		name=names.get_first_name(gender=args.randomsearch)
 		args.id = name
 		goToUserPage("https://www.facebook.com/" + args.id)
 
