@@ -17,7 +17,7 @@ sudo pip install --upgrade virtualenv
 wget https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-linux32.tar.gz
 
 # Extract the geckodriver file
-tar -xvf geckodriver-v0.19.1-linux32.tar.g
+tar -xvf geckodriver-v0.19.1-linux32.tar.gz
 
 # Remove the old driver from the bin directory
 sudo rm /usr/bin/geckodriver
