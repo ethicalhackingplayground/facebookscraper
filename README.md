@@ -17,9 +17,8 @@ A bot that downloads photos from a facebook page
 > python facebookbot.py -h
 
 usage: facebookbot.py [-h] -u USERNAME -p PASSWORD [-n HASNAME] [-d ID]
-                      [-r RANDOMSEARCH] [-i ITERATIONS] [-min MIN] [-max MAX]
-
-                   
+                      [-r RANDOMSEARCH] [-i ITERATIONS]
+                
                    
 ### Arguments
 
