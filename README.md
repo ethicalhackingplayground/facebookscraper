@@ -2,7 +2,7 @@
 
 A bot that downloads photos from a facebook page
 
-### Getting Evrything Ready
+### Getting Everything Ready
 > sudo apt-get update && apt-get upgrade && apt-get install git
 
 ### How to download 
