@@ -62,6 +62,9 @@ def login (username, password):
 		
 
 def randomPage ():
+	if args.iterations > 100:
+		print "[!] Too many downloads try a value under 100"
+		return
 	for i in range(0, args.iterations):
 		if (i == args.iterations):
 			break
