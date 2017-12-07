@@ -39,4 +39,5 @@ sudo mkdir images
 sudo pip install -r requirements.txt
 
 # Changing home directory permissions
-cd $ROOT && sudo chown -R $USER: $HOME && cd facebookbot
+cd $ROOT && sudo chown -R $USER: $HOME && cd $ROOT && cd facebookscraper/
+
