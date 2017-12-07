@@ -136,10 +136,6 @@ def getImages (currentUrl):
 		for image in images:
 			print "\n[+] Downloading " + image
 			os.system("wget -q " + "'" + image + "'" + " -P images/" + args.id)
-
-	# Start the random download again.
-	if (args.randomsearch == 'male' or args.randomsearch == 'female'):
-		randomPage()
 	
 
 def Main ():
