@@ -13,6 +13,9 @@ A bot that downloads photos from a facebook page
 
 > cd facebookscraper && sudo chmod +x setup.sh && sudo sh setup.sh
 
+### Changing The Home Directory Permissions
+> cd $ROOT && sudo chown -R $USER: $HOME && cd $ROOT && cd facebookscraper/
+
 ### How to get help
 > python facebookbot.py -h
 
