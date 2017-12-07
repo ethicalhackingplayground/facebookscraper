@@ -11,7 +11,7 @@ A bot that downloads photos from a facebook page
 
 ### How to Install
 
-> sudo sh setup.sh
+> cd facebookscraper && sudo sh setup.sh
 
 ### How to get help
 > python facebookbot.py -h
